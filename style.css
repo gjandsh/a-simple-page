@@ -1,0 +1,83 @@
+body{margin:0}
+/*logo模块*/
+.logo{text-align:center;margin-bottom: 10px}
+.logo > .img{
+    display: inline-block;
+    height: 72px;
+    width: 72px;
+    border-radius: 100%;
+    background:#d8d8d8;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: middle;
+}
+.logo > .slogan{ padding:0; margin-top:30px; }
+.logo > .slogan >li{
+    display: inline-block;  /*设置为inline-block之后，list-item属性就没有了，不需要再设置list-style-type为none*/
+    background:#d8d8d8;
+    line-height: 24px;
+    min-width: 128px;
+    margin-bottom:20px;
+    margin-left: 14px;
+    margin-right: 14px;}
+/*banner模块*/
+.banner{
+background: #EFEFEF;
+text-align: center;
+padding-top: 46px;
+}
+.banner > h2{
+display:inline-block;
+background:#d8d8d8;
+border-radius:14px;
+padding:0 2em;
+min-width:200px;
+line-height:40px;
+margin-top:10px;
+margin-bottom: 10px;
+}
+.banner > .detail{
+    padding-top:16px;
+    padding-bottom: 34px;}
+.banner > .detail p{
+background:#e8e8e8;
+border-radius:14px;
+max-width:250px;
+line-height:24px;
+margin-left:auto;
+margin-right:auto;
+margin-top:20px;}
+/*products模块*/
+.products{
+    margin-top:42px;
+    margin-left:16px;
+    margin-right:16px;}
+.products>ol{
+    list-style-type: none;
+    padding-left:0;
+   }
+
+.products>ol>li>.img{
+background:#d8d8d8;
+border-radius:4px;
+min-width:288px;
+height:180px;
+}
+
+.products>ol>li>h3{
+max-width: 204px;
+background:#bcbcbc;
+border-radius:4px;
+line-height:24px;
+margin-top:20px;
+margin-bottom: 14px;
+}
+.products>ol>li>p{
+background:#ececec;
+border-radius:4px;
+min-width:288px;
+line-height:16px;
+font-size:14px;
+margin-bottom: 32px;
+}
