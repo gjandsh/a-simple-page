@@ -104,11 +104,23 @@ margin-bottom: 32px;
 }    
 @media(min-width:640px){
         .products ol li{
-         width:50%;  
-         max-width: 288px;}
+         width: calc(50% - 16px);  
+         box-sizing: border-box;}
         .products ol{
             display:flex;
             flex-wrap:wrap;
             justify-content: space-between;
 }
+}
+@media(min-width:960px){
+       .products ol li{
+         width: calc(33.333333% - 21.333333px);  
+         box-sizing: border-box;}
+
+}
+@media(min-width:1440px){
+    .products{
+    max-width:928px; 
+    margin-left:auto;
+    margin-right:auto;}
 }
