@@ -1,7 +1,7 @@
 body{margin:0}
 /*logo模块*/
-.logo{text-align:center;margin-bottom: 10px}
-.logo > .img{
+.logo{text-align:center;margin-bottom: 10px;}
+.logo .img{
     display: inline-block;
     height: 72px;
     width: 72px;
@@ -12,8 +12,8 @@ body{margin:0}
     margin-right: auto;
     text-align: middle;
 }
-.logo > .slogan{ padding:0; margin-top:30px; }
-.logo > .slogan >li{
+.logo .slogan{ padding:0; margin-top:30px; }
+.logo .slogan >li{
     display: inline-block;  /*设置为inline-block之后，list-item属性就没有了，不需要再设置list-style-type为none*/
     background:#d8d8d8;
     line-height: 24px;
@@ -21,26 +21,36 @@ body{margin:0}
     margin-bottom:20px;
     margin-left: 14px;
     margin-right: 14px;}
+.logo .img img{
+width:100%;
+height:100%;
+border-radius: 100%;
+}
 /*banner模块*/
 .banner{
 background: #EFEFEF;
 text-align: center;
 padding-top: 46px;
 }
-.banner > h2{
+.banner h2{
 display:inline-block;
 background:#d8d8d8;
 border-radius:14px;
-padding:0 2em;
 min-width:200px;
 line-height:40px;
 margin-top:10px;
 margin-bottom: 10px;
 }
-.banner > .detail{
+.banner .oneline h2{
+    padding-left: 52.5px;
+    padding-right:52.5px;
+    margin-top:30px;
+    margin-bottom: 0;
+}
+.banner .detail{
     padding-top:16px;
     padding-bottom: 34px;}
-.banner > .detail p{
+.banner .detail p{
 background:#e8e8e8;
 border-radius:14px;
 max-width:250px;
@@ -48,36 +58,57 @@ line-height:24px;
 margin-left:auto;
 margin-right:auto;
 margin-top:20px;}
+.banner .oneline{display:none;}
+@media (min-width:640px){
+.banner .twoline{display: none;}
+.banner .oneline{display: block;}
+.banner .detail{padding-bottom:82px;}
+.banner .detail p{max-width:536px;}
+}
 /*products模块*/
 .products{
     margin-top:42px;
     margin-left:16px;
     margin-right:16px;}
-.products>ol{
+
+.products ol{
     list-style-type: none;
     padding-left:0;
-   }
-
-.products>ol>li>.img{
+      }
+.products .img{
 background:#d8d8d8;
 border-radius:4px;
 min-width:288px;
 height:180px;
 }
-
-.products>ol>li>h3{
-max-width: 204px;
+.products .img img{
+width:100%;
+height:100%;
+border-radius: 4px;
+}
+.products h3{
+max-width: 260px;
 background:#bcbcbc;
 border-radius:4px;
 line-height:24px;
 margin-top:20px;
 margin-bottom: 14px;
 }
-.products>ol>li>p{
+.products p{
 background:#ececec;
 border-radius:4px;
-min-width:288px;
+max-width:288px;
 line-height:16px;
 font-size:14px;
 margin-bottom: 32px;
+}    
+@media(min-width:640px){
+        .products ol li{
+         width:50%;  
+         max-width: 288px;}
+        .products ol{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: space-between;
+}
 }
